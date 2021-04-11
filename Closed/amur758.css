@@ -1,0 +1,18 @@
+img.resize {
+  max-width:7%;
+  max-height:7%;
+}
+
+#frame{
+    width: 80%;
+    height:auto;
+}
+
+#bluSearch{
+    height:50px;
+}
+
+#bookSearch{
+    height:50px;
+}
+

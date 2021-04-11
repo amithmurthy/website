@@ -1,0 +1,112 @@
+<!---References:
+    -HTML and CSS examples provided on canvas was used for much of the code below that serrved as a template on which I based the assignmnet
+    -W3Schools for methods such as oninput()
+    -->
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+   <title>La Boutique Cassée</title>
+   <link rel="stylesheet" type="text/css" href="amur758.css" />
+   
+   <img class="resize" src = "http://localhost:8188/Service.svc/logo" ></img> 
+</head>
+<body style="background-color:lightgrey;">
+    <header>
+      <table style="width: 100%;">
+         <tr>
+            <td id="Home" class="center" onclick="showHome();">
+               Home
+            </td>
+            <td id="Books" class="center" onclick="showBooks();">
+               Books
+            </td>
+            <td id="Bluray" class="center" onclick="showBluray();">
+               Bluray 
+            </td>
+			<td id="Register" class="center" onclick="showRegister();">
+				Register
+			</td>
+			<td id="Comments" class="center" onclick="showComments();">
+				Comments
+			</td>
+			<td id="Login" class="center" onclick="showLogin();">
+				Login
+			</td>	
+         </tr>
+      </table>
+      <hr />
+      <hr />
+   </header>
+   <div id="HomeSection">
+      <section>
+         <p>
+            Welcome to our store! We sell Books and DVDs.
+         </p>
+      </section>
+   </div>
+    <div id="bookSearch">
+        <form>
+            Search: <input type="text" name="uname" id="bookSearchBar" oninput="bookSearch();"><br>
+        </form>
+    </div>
+     <div id="BooksSection">
+         <p>
+            Books
+         </p>
+   </div>
+    <div id="bluSearch">
+        <form>
+            Search: <input type="text" name="uname" id="bluSearchBar" oninput="bluraySearch();"><br>
+        </form>
+    </div>
+   <div id="BluraySection">
+      <section>
+         <p>
+            Bluray 
+         </p>
+      </section>
+   </div>
+   <div id="RegisterSection">
+		<section>
+			<p>
+				Register
+                <form>
+                    <!---Reference: https://www.w3schools.com/tags/tag_input.asp -->
+                    Username: <input type="text" name="uname" id="User"><br>
+                    Password: <input type="password" name="pass" id="Pass"><br>
+                    Address: <input type="text" name="add" id="address"><br>
+                </form>
+                <button type="button" onclick="register();"> Register </button>
+			</p>
+		 </section>
+	</div>
+	<div id="CommentsSection">
+		<section>
+			<p> 
+				Comments
+                <form>
+                    <!---Reference: https://www.w3schools.com/tags/tag_input.asp -->
+                    Username: <input type="text" name="uname" id="userName"><br>
+                    Comment: <input type="text" name="pass" id="comment"><br>
+                </form>
+                <button type="submit" onclick="postComment();">Submit</button>
+			</p>
+		</section>
+        <iframe class="iframe" src="http://localhost:8188/Service.svc/htmlcomments" id="frame"></iframe>
+	</div>
+	<div id="LoginSection">
+		<section>
+			<p>
+				Login
+				<form action="javascript:void(0)">
+                    Username: <input type="text" name="uname1" id="username"><br>
+                    Password: <input type="password" name="pass1" id="password"><br>
+				</form>
+				<button type ="button" onclick="checkLogin();"> Submit </button>
+			</p>
+		</section>
+	</div>
+    <script src="amur758.js"></script>
+</body>
+</html>
